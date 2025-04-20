@@ -1,0 +1,134 @@
+<!--  -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Background Audio Player</title>
+</head>
+<body>
+    <h2>Background Audio Player</h2>
+    <audio id="bgAudio" src="audiofile.mp3"></audio>
+    <button onclick="playAudio()">Play</button>
+    <button onclick="pauseAudio()">Pause</button>
+    <input type="range" min="0" max="1" step="0.01" onchange="setVolume(this.value)">
+
+    <script>
+        const audio = document.getElementById("bgAudio");
+
+        function playAudio() {
+            audio.play();
+        }
+
+        function pauseAudio() {
+            audio.pause();
+        }
+
+        function setVolume(value) {
+            audio.volume = value;
+        }
+    </script>
+</body>
+</html>
+<!-- ________________________________________
+2. HTML5 Registration Form with Validation -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Registration Form</title>
+</head>
+<body>
+    <form>
+        <label>Name: <input type="text" name="name" required pattern="[A-Za-z\s]{3,}" /></label><br>
+        <label>Email: <input type="email" name="email" required /></label><br>
+        <label>Password: <input type="password" name="password" required minlength="6" /></label><br>
+        <label>Date of Birth: <input type="date" name="dob" required /></label><br>
+        <label>Mobile Number: <input type="tel" name="mobile" required pattern="[0-9]{10}" /></label><br>
+        <input type="submit" value="Register" />
+    </form>
+</body>
+</html>
+<!-- ________________________________________
+3. Animated Interactive Image Gallery using CSS3 and JavaScript -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <style>
+        .gallery img {
+            width: 200px;
+            transition: transform 0.3s, opacity 0.3s;
+            margin: 10px;
+        }
+        .gallery img:hover {
+            transform: scale(1.2);
+            opacity: 0.8;
+        }
+    </style>
+</head>
+<body>
+    <h2>Interactive Image Gallery</h2>
+    <div class="gallery">
+        <img src="img1.jpg" alt="Image 1">
+        <img src="img2.jpg" alt="Image 2">
+        <img src="img3.jpg" alt="Image 3">
+    </div>
+</body>
+</html>
+
+<!-- 4. Differences Between 2D and 3D Transforms in CSS
+•	2D Transforms: Applies changes on the X and Y axes.
+•	3D Transforms: Applies changes on X, Y, and Z axes, giving depth to elements.
+Examples: -->
+<style>
+    .box2D {
+        width: 100px;
+        height: 100px;
+        background: lightblue;
+        transform: rotate(45deg) scale(1.2);
+    }
+
+    .box3D {
+        width: 100px;
+        height: 100px;
+        background: lightgreen;
+        transform: perspective(500px) rotateX(45deg);
+    }
+</style>
+<div class="box2D">2D</div>
+<div class="box3D">3D</div>
+<!-- ________________________________________
+5. Error Handling in JavaScript with Form Validation -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Form Validation</title>
+</head>
+<body>
+    <form id="myForm">
+        <input type="text" id="username" placeholder="Username" required><br>
+        <input type="email" id="email" placeholder="Email" required><br>
+        <button type="submit">Submit</button>
+    </form>
+
+    <script>
+        document.getElementById("myForm").addEventListener("submit", function(e) {
+            e.preventDefault();
+            try {
+                const username = document.getElementById("username").value;
+                const email = document.getElementById("email").value;
+                if (!username || !email) {
+                    throw "All fields must be filled!";
+                }
+                alert("Form submitted successfully!");
+            } catch (err) {
+                alert("Error: " + err);
+            }
+        });
+    </script>
+</body>
+</html>
+<!-- ________________________________________
+End of Assignment
+ -->

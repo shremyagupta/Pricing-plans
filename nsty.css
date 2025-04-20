@@ -1,0 +1,13 @@
+*{
+    text-align: center;
+}
+ #maintopic{
+    color: blue;
+} 
+h1,h3, h5{
+    font-family: "georgia";
+}
+.content{
+    background-color:#6495ed;color:white;
+}
+
